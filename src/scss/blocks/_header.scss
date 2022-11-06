@@ -1,0 +1,116 @@
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: #25292f;
+    height: 65px;
+    width: 100%;
+    
+&__img-logo {
+    height: 45px; 
+    transform: rotate(350deg);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @media (max-width: 650px){
+        display: none;
+    } 
+    
+    @include mobile {
+        display: none;
+    }
+}
+
+&__wrapper {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+&__search{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+    @media (max-width: 650px){
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 10px 0 10px;
+    } 
+}
+
+&__loupe{
+    margin-right: 20px;
+
+    @include mobile {
+        margin-right: 10px;
+    }
+}
+
+&__loupe:hover {
+    cursor: pointer;
+}
+
+.header__input-wrapper {
+    display: flex;
+    align-items: center;
+}
+&__input {
+    width: 0px;
+    height: 0px;
+    border: none;
+    position: absolute;
+    z-index: -10;
+    right: 20px;
+    background-color: #25292f;
+    transition: 0.1s;
+}
+
+
+&__input.visible {
+    width: 200px;
+    height: 33px;
+    border-radius: 5px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding-left: 8px;
+    color: #cbc9c9;
+    background-color: #000;
+    border: none;
+    position: relative;
+    right: 0;
+    z-index: 10;
+
+    @include mobile {
+        width: 35vw;
+        height: 28px;
+    }
+
+    @media (max-width: 360px) {
+        width: 15vw;
+    }
+}
+
+&__input:focus {
+    outline: none;
+}
+
+&__input::placeholder{
+    color: #fff;
+    opacity: 0.8;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 16px;
+    @include mobile {
+        color: transparent;
+    }
+}
+    
+
+&__button {
+    background: transparent;
+    border: none;
+    margin-right: 10px;
+}
+}

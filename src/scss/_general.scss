@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+button:focus {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.7;
+}
